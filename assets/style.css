@@ -501,6 +501,9 @@ select {
     margin-left: 14rem;
 }
 
+.article-about{
+    margin-left: 0.5rem;
+}
 .article-about h5{
     font-size: 1.3rem;
     font-weight: 500;
@@ -530,11 +533,11 @@ select {
 }
 .about-icon-circle i{
     font-size: 1.9rem;
-    padding: 1.5rem;
+    padding: 1.2rem;
     color: #EA5433;
     border-radius: 50%;
     border: 2px solid #F6CABA;
-    margin-right: 1rem;
+    margin-right: 0.4rem;
 }
 .about-text h3{
     font-size: 1rem;
