@@ -79,7 +79,7 @@ body {
     max-width: 1380px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
 }
 
 input, textarea,
@@ -363,20 +363,33 @@ select {
     border-radius: 6px;
     box-shadow: 2px 1px 3px rgba(201, 199, 199, 0.7);
 }
+.nav ul ul .drop-ul{
+    position: absolute;
+    top: 10px;
+    left: 125px;
+    display: none;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 2px 1px 3px rgba(201, 199, 199, 0.7);
+}
 .nav ul li:hover > ul{
     display: block;
 }
 .nav ul ul li{
+    font-size: 0.8rem;
     width: 120px;
     display: block;
     position: relative;
+    margin-left: 0.5rem;
 }
-.nav ul ul ul li{
+.nav  .drop-ul li{
     display: block;
     position: relative;
-    top: -80px;
-    left: 120px;
+    top: -20px;
+    height: 30px;
+    width: 65px;
 }
+
 
 
 
@@ -486,7 +499,8 @@ select {
 }
 .about-img img{
     height:700px;
-    width:550px;
+    width:600px;
+    margin-right: 1rem;
 }
 .about-icon i{
     font-size: 1.5rem;
@@ -498,7 +512,7 @@ select {
 
 .about-icon{
     margin-top: -24rem;
-    margin-left: 14rem;
+    margin-left: 16rem;
 }
 
 .article-about{
@@ -537,7 +551,7 @@ select {
     color: #EA5433;
     border-radius: 50%;
     border: 2px solid #F6CABA;
-    margin-right: 0.4rem;
+    margin-right: 0.2rem;
 }
 .about-text h3{
     font-size: 1rem;
@@ -574,7 +588,6 @@ select {
     width: 300%;
     margin-left: 1rem;
     padding-right: 1rem;
-    color: red;
 }
 
 @keyframes slider1{
@@ -742,17 +755,18 @@ select {
  }
 .vision-text{
     padding: 1rem;
-    width: 570px;
+    width: 580px;
     height: 150px;
     border-radius: 8px;
     background-color: rgba(255, 254, 254, 0.904);
-    margin-left: -37rem;
+    margin-left: -37.8rem;
     margin-top: 11rem;
 }
 .article-vision img{
     border-radius: 8px;
-    height: 350px;
-    width: 610px;
+    height: 380px;
+    width: 640px;
+    margin-left: 0.8rem;
 }
 
 /* Portfolio */
@@ -883,7 +897,7 @@ select {
 }
 
 .portfolio-image img{
-    width: 100%;
+    width: 430px;
     margin-bottom: 2.5rem;
 }
 .portfolio-image:hover .img-hover{
@@ -892,10 +906,10 @@ select {
 }
 
 .img-hover{
-    margin-left: -21.8rem;
+    margin-left: -24.5rem;
     margin-top: 12rem;
     height: 80px;
-    width: 300px;
+    width: 350px;
     padding: 0.8rem;
     color: rgba(0, 0, 0, 0.0);
 }
@@ -1035,18 +1049,21 @@ select {
     height: 30px;
     width: 120px;
     border-left: unset;
+    color: rgba(253, 253, 253, 0.7);
     -webkit-transform: rotate(60deg);
     -moz-transform: rotate(60deg);
     transform: rotate(60deg);
     writing-mode: lr-tb;
-    background-color: #EA5433;
-    color: white;
     margin-left: 13rem;
     margin-top: -2.5rem;
     border-bottom-left-radius:  1px;
     border-bottom-right-radius:  1px;
     border-top-left-radius:  25px;
     border-top-right-radius:  15px;
+}
+.article-price :hover .degrees{
+    color: white;
+    background-color: #EA5433;
 }
 
 .faqs {
@@ -1325,12 +1342,14 @@ small a{
 }
 
 /* Media Queries Style*/
-@media screen and (max-width: 970px) {
-    html{
+@media screen  and (max-width: 1050px) 
+{
+    html {
         font-size: 14px;
+        padding-bottom: 50rem;
     }
     .container {
-        max-width: 1380px;
+        max-width: 990px;
         width: 100%;
         margin: 0 auto;
         padding: 0 2rem;
@@ -1368,7 +1387,13 @@ small a{
     }
     /*Main */
     .title{
-        padding-top: 12.5rem;
+        padding-top: 30rem;
+    }
+    .sm-header{
+        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(./media/hero-bg.jpg) 50% 60% no-repeat;
+        height: 80vh;
+        background-size: cover;
+        width: 100%;
     }
     .title h1{
         font-size: 4.5rem;
@@ -1377,8 +1402,8 @@ small a{
         font-size: 2.3rem;
     }
     .sm-title a{
-        padding: 0.5rem 4.5rem;
-        font-size: 2rem;
+        padding: 0.5rem 1.8rem;
+        font-size: 1.8rem;
         font-weight: 500;
         background-color: #584B48;
         color: white;
@@ -1386,12 +1411,12 @@ small a{
         margin-left: 4.5rem;
     }
     .sm-title i{
-        padding: 3rem;
-        font-size: 2rem;
+        padding: 2.3rem;
+        font-size: 1.5rem;
         border-radius: 50%;
         color: white;
         background-color: #EA5433;
-        margin-left: -24.5rem;
+        margin-left: -18.5rem;
     }
     .sm-article-head {
         padding: 2rem;
@@ -1412,6 +1437,11 @@ small a{
         width: 100%;
         box-shadow: 1px 2px 2px 3px rgba(201, 199, 199, 0.7);
     }
+    .sm-article-item i{
+        font-size: 2.5rem;
+    }
+
+    /*About*/
     .sm-about{
         width: 100%;
         top: 200px;
@@ -1458,7 +1488,7 @@ small a{
     .sm-slider1 figure img{
         position: relative;
         height: 70px;
-        width: 150px;
+        width: 200px;
         margin: 0;
         left: 0;
         animation: 18s slider infinite;
@@ -1506,42 +1536,6 @@ small a{
         100% {
             left: -400%;
         }
-        120% {
-            left: -400%;
-        }
-        125% {
-            left: -500%;
-        }
-        145% {
-            left: -500%;
-        }
-        150% {
-            left: -600%;
-        }
-        170% {
-            left: -600%;
-        }
-        175% {
-            left: -700%;
-        }
-    }
-    @keyframes sm-dot {
-        0% {
-            left: 0;
-        }
-        20% {
-            left: 0;
-        }
-        25% {
-            left: -100%;
-        }
-        45% {
-            left: -100%;
-        }
-        50% {
-            left: -200%;
-        }
-        
     }
     .sm-slide-text1 img {
         color: rgb(54, 54, 54, 0.9);
@@ -1550,7 +1544,7 @@ small a{
     .sm-slide-dot{
         overflow: hidden;
         width: 30px;
-        margin-left: 30rem;
+        margin-left: 33rem;
         padding-top: 2rem;
     }
     .sm-dot{
@@ -1572,6 +1566,7 @@ small a{
         animation: 18s slider infinite;
     }
 
+    /*Service*/
     .sm-service h2{
         font-size: 3rem;
     }
@@ -1582,7 +1577,7 @@ small a{
         margin: 0.9rem;
     }
     .sm-service-text{
-        width: 422.9px;
+        width: 430px;
         padding: 0.5rem;
         box-shadow: 1px 1px 1px 2px #eeecec ;
     }
@@ -1600,13 +1595,13 @@ small a{
         padding: 2rem;
     }
     .sm-service-vision img{
-        width: 420px;
+        width: 450px;
     }
     .sm-vision-text{
-        width: 340px;
+        width: 360px;
         height: 200px;
         margin-top: 9rem;
-        margin-left: -27rem;
+        margin-left: -28rem;
     }
     .sm-vision-text h4{
         font-size: 2rem;
@@ -1619,9 +1614,14 @@ small a{
     .sm-vision-text .sm-vision-a{
         font-size: 1rem;
     }
+
+    /*Portfolio*/
+    .sm-portfolio-header{
+        height: 50vh;
+    }
     .sm-portfolio-dots{
         width: 120px;
-        margin-left: 30rem;
+        margin-left: 32rem;
     }
     
     .sm-portfolio-body h2{
@@ -1632,7 +1632,7 @@ small a{
         padding: 1rem;
     }
     .sm-portfolio-image img{
-        width: 400px;
+        width: 450px;
     }
     .sm-img-hover{
         margin-left: -26rem;
@@ -1648,17 +1648,18 @@ small a{
         padding-top: 1rem;
     }
     
+    /*Team*/
     .sm-team-box img{
-        width: 430px;
+        width: 450px;
         height: 450px;
     }
     .sm-team-icon {
         margin-top: 28.8rem;
-        margin-left: -30.7rem;
-        width: 430px;
+        margin-left: -32.15rem;
+        width: 450px;
     }
     .sm-team-text{
-        width: 430px;
+        width: 450px;
         margin-bottom: 2rem;
     }
     .sm-team-text h4{
@@ -1668,7 +1669,7 @@ small a{
         font-size: 1.3rem;
     }
 
-
+    /*Pricing*/
     .sm-article-price h2{
         font-size: 3rem;
     }
@@ -1715,7 +1716,24 @@ small a{
         font-weight: 600;
         margin: 1rem;
     }
+    .sm-degrees{
+        height: 30px;
+        width: 120px;
+        border-left: unset;
+        color: rgba(253, 253, 253, 0.7);
+        -webkit-transform: rotate(60deg);
+        -moz-transform: rotate(60deg);
+        transform: rotate(60deg);
+        writing-mode: lr-tb;
+        margin-left: 23rem;
+        margin-top: -2.5rem;
+        border-bottom-left-radius:  1px;
+        border-bottom-right-radius:  1px;
+        border-top-left-radius:  25px;
+        border-top-right-radius:  15px;
+    }
 
+    /*FAQS*/
     .sm-faqs h2{
         font-size: 3rem;
     }
@@ -1772,7 +1790,10 @@ small a{
         margin: 1rem;
     }
 
-
+    /*Address*/
+    .sm-article-address{
+        padding-top: 1rem;
+    }
     .sm-article-address h4{
         font-size: 2.8rem;
         font-weight: 500;
@@ -1867,7 +1888,7 @@ small a{
         font-size: 14px;
     }
     .container {
-        max-width: 460px;
+        max-width: 480px;
     }
     .smm-column {
         flex-direction: column;
@@ -1885,7 +1906,7 @@ small a{
         padding-top: 8rem;
         text-align: center;
         z-index: 9;
-        
+        margin-left: -6rem;
     }
     #toggle:checked ~ .nav{
         display: inline-block;
@@ -1901,50 +1922,52 @@ small a{
     }
     /*Main */
     .smm-header{
-        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(./media/hero-bg.jpg) 53% 50% no-repeat;
-        height: 95vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url(./media/hero-bg.jpg) 49% 50% no-repeat;
+        height: 80vh;
         background-size: cover;
+        width: 100%;
     }
     .smm-title{
-        padding-top: 20rem;
+        padding-top: 13rem;
     }
     .smm-title h1{
         font-size: 1.5rem;
         padding-bottom: 0.5rem;
     }
     .smm-title p{
-        font-size: 1.1rem;
+        font-size: 0.8rem;
     }
     .smm-title a{
-        padding: 0.5rem 2rem;
-        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+        font-size: 0.8rem;
         font-weight: 500;
         background-color: #584B48;
         color: white;
         border-radius: 30px;
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
     .smm-title i{
-        padding: 1.6rem;
+        padding: 0.8rem;
         font-size: 1rem;
         border-radius: 50%;
         color: white;
         background-color: #EA5433;
-        margin-left: -13rem;
+        margin-left: -9rem;
     }
     .smm-article-head {
+        margin-top: 3.9rem;
         padding: 1rem;
         border-radius: 8px;
     }
     .smm-article-head h2 {
-        font-size: 2.3rem;
+        font-size: 1.5rem;
     }
     .smm-article-head p{
         font-size: 1rem;
     }
     .smm-article-head a{
-        font-size: 1rem;
-        margin-left: 9rem;
+        font-size: 0.8rem;
+        margin-left: 3.5rem;
         font-weight: 500;
     }
     .smm-article-item{
@@ -1952,16 +1975,18 @@ small a{
         width: 100%;
         box-shadow: 1px 1px 3px rgba(201, 199, 199, 0.7);
     }
+
+    /*About*/
     .smm-about{
         width: 100%;
         top: 200px;
     }
     .smm-about-img img{
-        height: 500px;
-        width: 400px;
+        height: 400px;
+        width: 300px;
     }
     .smm-about-icon{
-        margin-left: 13rem;
+        margin-left: 9.5rem;
         margin-top: -19rem;
     }
     .smm-article-about{
@@ -1991,7 +2016,7 @@ small a{
     .smm-slider1 figure img{
         position: relative;
         height: 70px;
-        width: 180px;
+        width: 80px;
         margin: 0;
         left: 0;
         animation: 18s slider infinite;
@@ -2059,15 +2084,12 @@ small a{
         }
     }
     
-    .smm-slider1 img {
-        color: rgb(54, 54, 54, 0.9);
-        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.9));
-    }
+    
     
     .smm-slide-dot{
         overflow: hidden;
         width: 30px;
-        margin-left: 14rem;
+        margin-left: 9.8rem;
         padding-top: 2rem;
     }
     .smm-dot{
@@ -2088,6 +2110,8 @@ small a{
         left: 0;
         animation: 18s slider infinite;
     }
+
+    /* Service*/
     .smm-service{
         align-items: flex-start;       
     }
@@ -2102,7 +2126,8 @@ small a{
         margin-right: 1.5rem;
     }
     .smm-service-text{
-        width: 400px;
+        width: 330px;
+        margin-left: -1.8rem;
         box-shadow: 1px 1px 1px 2px #eeecec ;
     }
     .smm-service-text h3{
@@ -2118,15 +2143,16 @@ small a{
         font-size: 1.5rem;
         padding: 2rem;
     }
+
     .smm-service-vision img{
-        width: 450px;
-        margin-left: -1.5rem;
+        width: 330px;
+        margin-left: -1rem;
     }
     .smm-vision-text{
-        width: 380px;
+        width: 300px;
         height: 200px;
         margin-top: 9rem;
-        margin-left: -29.5rem;
+        margin-left: -22.6rem;
     }
     .smm-vision-text h4{
         font-size: 2rem;
@@ -2139,9 +2165,11 @@ small a{
     .smm-vision-text .sm-vision-a{
         font-size: 1rem;
     }
+
+    /* Portfolio*/
     .smm-portfolio-dots{
         width: 120px;
-        margin-left: 14rem;
+        margin-left: 8.8rem;
     }
     
     .smm-flex-60{
@@ -2156,13 +2184,13 @@ small a{
         padding-bottom: 1.5rem;
     }
     .smm-portfolio-image img{
-        width: 470px;
+        width: 330px;
         margin-left: -3rem;
     }
     .smm-img-hover{
-        margin-left: -26rem;
+        margin-left: -21.7rem;
         height: 80px;
-        width: 350px;
+        width: 300px;
     }
     .smm-img-hover h4,
     .smm-img-hover p{
@@ -2173,20 +2201,21 @@ small a{
         padding-top: 1rem;
     }
     
+    /* Team*/
     .smm-team-box img{
-        width: 450px;
-        height: 450px;
-        margin-left: -1.5rem;
+        width: 330px;
+        height: 400px;
+        margin-left: -1rem;
     }
     .smm-team-icon {
-        margin-top: 28.8rem;
-        margin-left: -32.1rem;
-        width: 450px;
+        margin-top: 25rem;
+        margin-left: -23.6rem;
+        width: 330px;
     }
     .smm-team-text{
-        width: 450px;
+        width: 330px;
         margin-bottom: 2rem;
-        margin-left: -1.5rem;
+        margin-left: -1rem;
     }
     .smm-team-text h4{
         font-size: 2rem;
@@ -2195,7 +2224,7 @@ small a{
         font-size: 1.3rem;
     }
 
-
+    /* Pricing*/
     .smm-article-price h2{
         font-size: 3rem;
     }
@@ -2204,10 +2233,10 @@ small a{
         font-weight: 600;
     }
     .smm-price-box{
-        width: 480px;
+        width: 300px;
         height: 410px;
         margin: 2rem 0;
-        box-shadow: 1px 6px 2px 3px #dfdfdf;
+        box-shadow: 1px 1px 2px 5px #dfdfdf;
     }
     .smm-price-box h4{
         font-size: 2rem;
@@ -2250,16 +2279,17 @@ small a{
         font-size: 1.3rem;
     }
     .smm-faqs-box{
-        width: 480px;
-        margin-left: -2.5rem;
+        width: 400px;
+        margin-left: -4rem;
     }
     .smm-faqs-item h3{
-        font-size: 1.4rem;
+        font-size: 0.8rem;
     }
     .smm-faqs-item span i{
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
+    /*Contact*/
     .smm-contact-article h2{
         font-size: 3rem;
     }
@@ -2268,17 +2298,17 @@ small a{
         padding-bottom: 1.5rem;
     }
     .smm-contact-box{
-        width: 480px;
+        width: 350px;
         margin-left: -1.8rem;
     }
     .smm-contact-size a i{
         font-size: 2rem;
     }
     .smm-contact-size h4{
-        font-size: 1.9rem;
+        font-size: 1rem;
     }
     .smm-contact-size p{
-        font-size: 1.3rem;
+        font-size: 0.6rem;
     }
 
     .smm-contact-form {
@@ -2308,6 +2338,7 @@ small a{
         margin: 1rem;
     }
 
+    /*Address*/
     .sm-article-address{
         margin-left: -2rem;
     }
@@ -2331,7 +2362,7 @@ small a{
         padding-bottom: 1.5rem;
     }
     .smm-article-ul{
-        width: 400px;
+        width: 300px;
         padding-bottom: 1rem;
         margin-left: -2rem;
     }
@@ -2347,7 +2378,7 @@ small a{
         font-size: 1.2rem;
     }
     .smm-article-subscribe{
-        width: 400px;
+        width: 300px;
         margin-left: -2rem;
     }
     .smm-article-subscribe h5{
@@ -2355,12 +2386,12 @@ small a{
         font-weight: 600;
     }
     .smm-article-subscribe p{
-        font-size: 1.2rem;
+        font-size: 0.7rem;
         font-weight: 600;
     }
     .smm-subscribe-box{
-        width: 350px;
-        padding: 0.5rem 2.2rem;
+        width: 300px;
+        padding: 0.5rem 1rem;
         border: 1px solid #F4B7A0;
         border-radius: 25px;
     }
@@ -2369,7 +2400,7 @@ small a{
         background-color: #EA5433;
         color: #ffffff;
         border-radius: 20px;
-        margin-left: 16rem;
+        margin-left: 12rem;
     }
 
     /*Footer*/
@@ -2377,7 +2408,7 @@ small a{
         padding: 2rem 0;
         font-family: sans-serif;
         line-height: 1.8;
-        margin-left: 5rem;
+        margin-left: 1rem;
     }
     
     footer small{
@@ -2393,8 +2424,8 @@ small a{
         font-size: 2.5rem;
         background-color: #EA5433;
         color: white;
-        bottom: 30px;
-        right: 30px;
+        bottom: 80px;
+        right: 120px;
         text-align: center;
     }
 }
